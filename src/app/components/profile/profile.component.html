@@ -1,0 +1,34 @@
+<app-banner title="edit profile"></app-banner>
+
+  
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <form #profileForm="ngForm" (ngSubmit)="editProfile()">
+            <div class="form-group">
+              <input type="text"name="firstName"[(ngModel)]="user.firstName"  readonly class="form-control" placeholder="firstName">
+            </div>
+            <div class="form-group">
+              <input type="text" name="lastName"[(ngModel)]="user.lastName"  readonly class="form-control" placeholder="lastName">
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" [(ngModel)]="user.email"readonly class="form-control" placeholder="email">
+            </div>
+            <div class="form-group">
+                <input type="password" name="oldPassword"[(ngModel)]="user.oldPassword"  class="form-control" placeholder="oldPassword">
+              </div>
+              <div class="form-group">
+                <input type="password" name="newPasword"[(ngModel)]="user.newPasword"  class="form-control" placeholder="newPasword">
+              </div>
+              
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary py-3 px-5" value="edit profile">
+            </div>
+          </form>  
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
